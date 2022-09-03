@@ -99,7 +99,7 @@ module Init_Command = {
           ++ project_name,
         );
 
-      output_string(bin_file, "#! /usr/bin/env ruby");
+      output_string(bin_file, "#! /usr/bin/env ruby\n\nputs \"hello world\"");
       close_out(bin_file);
     };
     project_name ++ Filename.dir_sep ++ "README" |> open_out |> close_out;
@@ -120,9 +120,37 @@ module Init_Command = {
     };
 };
 
+module Run_Command = {
+  type arguments = {
+    file_name: string,
+    ruby_arguments: string
+  }
+
+  let is_execuatable = () => Sys.file_exists("bin")
+
+  let lib_folder_exist = () => Sys.file_exists("lib")
+
+  let exec = (arguments: arguments, ()) => {
+    if (! is_execuatable()) { 
+      Result.error("No bin folder")
+    } else {
+      try (
+        Sys.command(Printf.sprintf("ruby %s bin/%s %s", 
+          lib_folder_exist() ? "-Ilib" : "",
+          arguments.file_name,
+          arguments.ruby_arguments)
+          )
+          |> (_ => Ok ())
+      ) {
+        | Sys_error(e) => Result.error(e)
+      }
+    }
+  }
+}
+
 type shine_subcommand =
   | Init(Init_Command.arguments)
-  | Run;
+  | Run(Run_Command.arguments);
 
 let commands = () => {
   open Init_Command;
@@ -149,7 +177,7 @@ let commands = () => {
         let summary =
           Clap.optional_string(
             ~short='s',
-            ~long="summaary",
+            ~long="summary",
             ~description="Project summary",
             (),
           );
@@ -195,6 +223,16 @@ let commands = () => {
           name,
         });
       }),
+      Clap.case(~description="Run a specific file", "run", () => {
+        let file_name = Clap.mandatory_string(~last= false, ~placeholder="ruby file", ());
+        let ruby_arguments = 
+          Clap.list_string(~placeholder = "Arguments", ()) |> String.concat(" ")
+
+          Run({
+            file_name,
+            ruby_arguments
+          })
+      })
     ]);
   ();
 
@@ -207,7 +245,7 @@ let run = (shine_subcommand, ()) => {
   let error =
     switch (shine_subcommand) {
     | Init(arguments) => Init_Command.exec(arguments, ())
-    | Run => failwith("Not implmented yet...")
+    | Run(arguments) => Run_Command.exec(arguments, ())
     };
 
   error
