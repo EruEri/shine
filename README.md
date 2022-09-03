@@ -9,7 +9,7 @@ $ shine init --help
 SYNOPSIS
 
     shine init --type <exec | lib> [--set-version <VALUE>]
-        [(--summaary|-s) <VALUE>] [(--description|-d) <VALUE>]
+        [(--summary|-s) <VALUE>] [(--description|-d) <VALUE>]
         [(--authors|-a) <VALUE>...] [(--email|-e) <VALUE>]
         [(--homepage|-h) <VALUE>] <Project name>
 
