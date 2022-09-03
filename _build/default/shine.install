@@ -1,8 +1,0 @@
-lib: [
-  "_build/install/default/lib/shine/META"
-  "_build/install/default/lib/shine/dune-package"
-  "_build/install/default/lib/shine/opam"
-]
-bin: [
-  "_build/install/default/bin/shine"
-]
