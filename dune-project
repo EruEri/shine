@@ -11,7 +11,7 @@
 
 (maintainers "EruEri")
 
-(license LGPLv2.1)
+(license GPLv3.0)
 
 (package
  (name shine)

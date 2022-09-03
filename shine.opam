@@ -4,7 +4,7 @@ synopsis: "A short synopsis"
 description: "A longer description"
 maintainer: ["EruEri"]
 authors: ["EruEri"]
-license: "LGPLv2.1"
+license: "GPLv3.0"
 homepage: "https://github.com/EruEri/shine"
 bug-reports: "https://github.com/EruEri/shine/issues"
 depends: [

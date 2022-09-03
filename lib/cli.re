@@ -17,17 +17,17 @@ module Init_Command = {
   };
 
   let create_main_dir = (arguments, ()) => {
-    Sys.mkdir(arguments.name, 0o330);
+    Sys.mkdir(arguments.name, 0o764);
   };
 
   let create_inner_direct = (arguments, ()) => {
     let project_name = arguments.name;
     let proj_type = arguments.proj_type;
-    Sys.mkdir(project_name ++ Filename.dir_sep ++ "lib", 0o330);
-    Sys.mkdir(project_name ++ Filename.dir_sep ++ "lest", 0o330);
+    Sys.mkdir(project_name ++ Filename.dir_sep ++ "lib", 0o764);
+    Sys.mkdir(project_name ++ Filename.dir_sep ++ "test", 0o764);
     switch (proj_type) {
     | Lib => ()
-    | Exec => Sys.mkdir(project_name ++ Filename.dir_sep ++ "bin", 0o330)
+    | Exec => Sys.mkdir(project_name ++ Filename.dir_sep ++ "bin", 0o764)
     };
   };
 
@@ -94,7 +94,7 @@ module Init_Command = {
         open_out(
           project_name
           ++ Filename.dir_sep
-          ++ "lib"
+          ++ "bin"
           ++ Filename.dir_sep
           ++ project_name,
         );
@@ -104,7 +104,7 @@ module Init_Command = {
     };
     project_name ++ Filename.dir_sep ++ "README" |> open_out |> close_out;
     project_name ++ Filename.dir_sep ++ "Rakefile" |> open_out |> close_out;
-    let gemspec_file = open_out(project_name);
+    let gemspec_file = open_out(project_name ++ Filename.dir_sep ++ project_name ++ ".gemspec");
     arguments |> gemspec_parameters |> output_string(gemspec_file);
     close_out(gemspec_file);
   };
