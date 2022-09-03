@@ -1,0 +1,4 @@
+(executable
+ (public_name shine)
+ (name main)
+ (libraries shine))

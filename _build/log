@@ -1,0 +1,122 @@
+# dune b
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /Users/ndiaye/Documents/Lang/Ocaml/Dune/shine
+# Auto-detected concurrency: 8
+$ /Users/ndiaye/.opam/default/bin/ocamlc.opt -config > /var/folders/xl/4jtgsphs7zjfbsx_jfx0m4k40000gn/T/dune_0d7bbb_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/ndiaye/.opam/default/lib/toplevel"
+#  ; ocaml_bin = External "/Users/ndiaye/.opam/default/bin"
+#  ; ocaml = Ok External "/Users/ndiaye/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/Users/ndiaye/.opam/default/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/ndiaye/.opam/default/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/ndiaye/.opam/default/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/ndiaye/.opam/default/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/ndiaye/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/ndiaye/.opam/default/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/ndiaye/Documents/Lang/Ocaml/Dune/shine"
+#        ; "INSIDE_DUNE" :
+#            "/Users/ndiaye/Documents/Lang/Ocaml/Dune/shine/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/ndiaye/Documents/Lang/Ocaml/Dune/shine/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/ndiaye/Documents/Lang/Ocaml/Dune/shine/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/ndiaye/Documents/Lang/Ocaml/Dune/shine/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/Users/ndiaye/.opam/default/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.14.0"
+#      ; standard_library_default = "/Users/ndiaye/.opam/default/lib/ocaml"
+#      ; standard_library = "/Users/ndiaye/.opam/default/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "arm64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "aarch64-apple-darwin21.4.0"
+#      ; target = "aarch64-apple-darwin21.4.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X031"
+#      ; cmi_magic_number = "Caml1999I031"
+#      ; cmo_magic_number = "Caml1999O031"
+#      ; cma_magic_number = "Caml1999A031"
+#      ; cmx_magic_number = "Caml1999Y031"
+#      ; cmxa_magic_number = "Caml1999Z031"
+#      ; ast_impl_magic_number = "Caml1999M031"
+#      ; ast_intf_magic_number = "Caml1999N031"
+#      ; cmxs_magic_number = "Caml1999D031"
+#      ; cmt_magic_number = "Caml1999T031"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/.sandbox/99dbbd1e85434c2ccd8655396ba74fd6/default && /Users/ndiaye/.opam/default/bin/refmt --print binary bin/main.re) > _build/.sandbox/99dbbd1e85434c2ccd8655396ba74fd6/default/bin/main.re.ml
+$ (cd _build/.sandbox/21fd48dd7e7e714432a3bf363a170f53/default && /Users/ndiaye/.opam/default/bin/refmt --print binary lib/cli.re) > _build/.sandbox/21fd48dd7e7e714432a3bf363a170f53/default/lib/cli.re.ml
+$ (cd _build/default && /Users/ndiaye/.opam/default/bin/ocamldep.opt -modules -impl lib/cli.re.ml) > _build/default/lib/.shine.objs/cli.re.ml.d
+$ (cd _build/default && /Users/ndiaye/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.shine.objs/byte -I /Users/ndiaye/.opam/default/lib/clap -no-alias-deps -opaque -open Shine -o lib/.shine.objs/byte/shine__Cli.cmo -c -impl lib/cli.re.ml)
+$ (cd _build/default && /Users/ndiaye/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/shine.cma lib/.shine.objs/byte/shine.cmo lib/.shine.objs/byte/shine__Cli.cmo)
+$ (cd _build/default && /Users/ndiaye/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I /Users/ndiaye/.opam/default/lib/clap -I lib/.shine.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.re.mli)
+$ (cd _build/default && /Users/ndiaye/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.shine.objs/byte -I lib/.shine.objs/native -I /Users/ndiaye/.opam/default/lib/clap -intf-suffix .ml -no-alias-deps -opaque -open Shine -o lib/.shine.objs/native/shine__Cli.cmx -c -impl lib/cli.re.ml)
+$ (cd _build/default && /Users/ndiaye/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/ndiaye/.opam/default/lib/clap -I lib/.shine.objs/byte -I lib/.shine.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.re.ml)
+$ (cd _build/default && /Users/ndiaye/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/shine.cmxa lib/.shine.objs/native/shine.cmx lib/.shine.objs/native/shine__Cli.cmx)
+$ (cd _build/default && /Users/ndiaye/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/shine.cmxs lib/shine.cmxa)
+$ (cd _build/default && /Users/ndiaye/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe /Users/ndiaye/.opam/default/lib/clap/clap.cmxa lib/shine.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
