@@ -11,12 +11,11 @@
 
 (maintainers "EruEri")
 
-(license GPLv3.0)
+(license LGPLv2.1)
 
 (package
  (name shine)
- (synopsis "A short synopsis")
- (description "A longer description")
- (depends ocaml dune clap))
+ (synopsis "A small ruby project creator")
+ (depends ocaml dune (clap (>= :"0.2.0"))))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project

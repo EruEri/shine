@@ -126,7 +126,7 @@ type shine_subcommand =
 
 let commands = () => {
   open Init_Command;
-  Clap.description("A small ruby project initializer");
+  Clap.description("A small ruby project creator");
 
   let subcommans =
     Clap.subcommand([
